@@ -1,0 +1,29 @@
+{
+  "name": "ramzioperator-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "postcss": "^8.5.14",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "overrides": {
+    "postcss": "^8.5.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "20.14.10",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "5.5.3"
+  }
+}
