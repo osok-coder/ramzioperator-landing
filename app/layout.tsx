@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ramzi Operator",
-  description: "Building small apps that can earn online.",
+  description: "Building simple apps that can earn online.",
 };
 
 export default function RootLayout({

@@ -1,23 +1,23 @@
 const liveApps = [
   {
     title: "Pharmacy Workflow Friction Audit",
-    label: "Case study: pharmacy operations",
-    description: "A quick workflow audit built from my pharmacy day job.",
+    label: "First test area: pharmacy",
+    description: "A simple tool that helps spot friction in a pharmacy workflow.",
     href: "https://workflow.ramzioperator.com",
   },
 ];
 
 const buildTypes = [
-  "Useful tools",
+  "Simple tools",
   "Small dashboards",
-  "iOS apps",
-  "Simple games",
-  "AI-assisted utilities",
-  "Clone-plus experiments",
+  "iPhone apps",
+  "Web apps",
+  "Useful experiments",
   "Workflow apps",
+  "Small games",
 ];
 
-const factorySteps = ["Idea", "Score", "MVP", "Build", "Launch", "Measure", "Improve or kill"];
+const factorySteps = ["Idea", "Score", "Build small", "Launch", "Measure", "Improve or kill"];
 
 export default function Home() {
   return (
@@ -45,11 +45,11 @@ export default function Home() {
             Ramzi Operator
           </h1>
           <p className="mt-8 max-w-2xl text-2xl font-medium leading-tight text-cyan-100/95 sm:text-3xl">
-            Building small apps that can earn online.
+            Building simple apps that can earn online.
           </p>
           <div className="mt-8 max-w-2xl space-y-5 text-lg leading-8 text-slate-300 sm:text-xl sm:leading-9">
-            <p>I use AI-assisted development to build, launch, and test simple web and iOS apps in public.</p>
-            <p>The goal is online leverage beyond presence-based income.</p>
+            <p>I&apos;m a pharmacist learning to build and test small web and iPhone apps.</p>
+            <p>The goal is to create income that does not always depend on being physically at work.</p>
           </div>
           <div className="mt-11 flex flex-col gap-3 sm:flex-row">
             <a
@@ -87,9 +87,9 @@ export default function Home() {
       <section id="apps" className="border-y border-white/[0.07] bg-white/[0.025]">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-20 sm:px-8 sm:py-24 lg:grid-cols-[0.7fr_1fr] lg:px-10">
           <div>
-            <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">Live Apps</h2>
+            <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">Live apps</h2>
             <p className="mt-5 max-w-lg text-base leading-7 text-slate-400">
-              Small apps and tests. Real usage beats perfect plans.
+              Small apps and tests. Real use matters more than perfect plans.
             </p>
           </div>
           <div className="grid gap-4">
@@ -102,7 +102,7 @@ export default function Home() {
                 <span className="text-sm font-bold text-cyan-200/85">{app.label}</span>
                 <h3 className="mt-5 text-2xl font-semibold text-white">{app.title}</h3>
                 <p className="mt-4 text-base leading-7 text-slate-300">{app.description}</p>
-                <p className="mt-7 text-sm font-semibold text-cyan-100/90">{app.href}</p>
+                <p className="mt-7 text-sm font-semibold text-cyan-100/90">Open app</p>
               </a>
             ))}
           </div>
@@ -111,23 +111,26 @@ export default function Home() {
 
       <section id="map" className="mx-auto w-full max-w-6xl px-6 py-20 sm:px-8 sm:py-24 lg:px-10">
         <div className="max-w-3xl">
-          <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">App Factory Map</h2>
+          <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">App map</h2>
           <p className="mt-6 text-lg leading-8 text-slate-300">
-            Every app starts small. I score ideas for demand, distribution, money path, build speed, and maintenance. Most ideas will be killed quickly. That is the point.
+            This is the simple process I use before spending too much time on an idea.
           </p>
         </div>
-        <div className="mt-12 grid gap-3 md:grid-cols-7">
+        <div className="mt-12 grid gap-3 md:grid-cols-6">
           {factorySteps.map((step) => (
             <div key={step} className="rounded-2xl border border-white/[0.07] bg-white/[0.035] p-4">
               <p className="text-sm font-semibold text-slate-100">{step}</p>
             </div>
           ))}
         </div>
+        <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-300">
+          Most ideas should start small. If people do not use it, need it, or care about it, I move on.
+        </p>
       </section>
 
       <section className="border-y border-white/[0.07] bg-white/[0.025]">
         <div className="mx-auto w-full max-w-6xl px-6 py-20 sm:px-8 sm:py-24 lg:px-10">
-          <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">What I Build</h2>
+          <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">What I build</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {buildTypes.map((item) => (
               <div key={item} className="rounded-2xl border border-white/[0.08] bg-slate-950/50 p-5 sm:p-6">
@@ -135,18 +138,20 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p className="mt-10 max-w-4xl text-lg leading-8 text-slate-300">
-            I am not tied to one niche. Pharmacy is my first lab because I understand the problems from inside. The wider goal is to build where the pain, demand, and money are real.
-          </p>
+          <div className="mt-10 max-w-4xl space-y-5 text-lg leading-8 text-slate-300">
+            <p>I am not tied to one niche.</p>
+            <p>Pharmacy is my first test area because I understand the problems from inside.</p>
+            <p>The wider goal is to build where the need is real.</p>
+          </div>
         </div>
       </section>
 
       <section className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-20 sm:px-8 sm:py-24 lg:grid-cols-[0.75fr_1fr] lg:px-10">
-        <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">Why This Exists</h2>
+        <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">Why this exists</h2>
         <div className="space-y-5 text-lg leading-8 text-slate-300">
-          <p>My day job depends heavily on physical presence.</p>
+          <p>My day job depends heavily on being physically present.</p>
           <p>
-            Ramzi Operator is my attempt to build online leverage through small software products, digital assets, attention, and distribution.
+            Ramzi Operator is my attempt to build online leverage through small apps, useful tools, and digital products.
           </p>
           <p>I am learning in public and shipping small.</p>
         </div>
@@ -155,6 +160,9 @@ export default function Home() {
       <section id="follow" className="mx-auto w-full max-w-6xl px-6 pb-24 sm:px-8 sm:pb-28 lg:px-10">
         <div className="rounded-3xl border border-white/[0.08] bg-slate-950/50 p-6 sm:p-8">
           <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">Follow</h2>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-slate-400">
+            Follow the process as I build, launch, test, improve, and kill small app ideas.
+          </p>
           <div className="mt-9 grid gap-3 sm:grid-cols-3">
             <a className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4 font-semibold text-slate-200 hover:border-cyan-200/30 sm:p-5" href="https://x.com/RamziOperator">
               X: @RamziOperator
