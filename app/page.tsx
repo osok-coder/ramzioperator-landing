@@ -143,9 +143,13 @@ export default function Home() {
 
       <section className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-20 sm:px-8 sm:py-24 lg:grid-cols-[0.75fr_1fr] lg:px-10">
         <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">Why This Exists</h2>
-        <p className="text-lg leading-8 text-slate-300">
-          My day job depends heavily on physical presence. Ramzi Operator is my attempt to build online leverage through small software products, digital assets, attention, and distribution. I am learning in public and shipping small.
-        </p>
+        <div className="space-y-5 text-lg leading-8 text-slate-300">
+          <p>My day job depends heavily on physical presence.</p>
+          <p>
+            Ramzi Operator is my attempt to build online leverage through small software products, digital assets, attention, and distribution.
+          </p>
+          <p>I am learning in public and shipping small.</p>
+        </div>
       </section>
 
       <section id="follow" className="mx-auto w-full max-w-6xl px-6 pb-24 sm:px-8 sm:pb-28 lg:px-10">
