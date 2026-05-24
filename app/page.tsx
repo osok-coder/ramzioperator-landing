@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const liveApps = [
   {
     title: "Pharmacy Workflow Friction Audit",
@@ -25,7 +29,40 @@ const buildTypes = [
 
 const factorySteps = ["Idea", "Score", "Build small", "Launch", "Measure", "Improve or kill"];
 
+const credibleStory = [
+  "How Credible started",
+  "I work as a locum pharmacist",
+  "That means I can be in different pharmacies every few days or weeks",
+  "I might do a good shift, solve problems, help the team, and leave a strong impression",
+  "But when I move to the next place, most of that proof stays behind",
+  "A manager saying they would have me back",
+  "A colleague saying I made the day easier",
+  "A reliable handover",
+  "A calm shift under pressure",
+  "All useful proof",
+  "But none of it sits in one place",
+  "When I spoke to friends, I realised this was not just a locum problem",
+  "Doctors have it",
+  "Freelancers have it",
+  "Contractors have it",
+  "Students on placements have it",
+  "Consultants have it",
+  "Agency workers have it",
+  "Anyone whose work depends on trust can have it",
+  "You can be good at what you do and still have no simple way to show it when it matters",
+  "I wanted my work proof to travel with me",
+  "Something I could share before a shift, a job, a project, a placement, or a first conversation",
+  "Not a CV",
+  "Not a polished sales page",
+  "Just one clean place where real people could say:",
+  "yes, I trust this person",
+  "That is where Credible came from",
+  "A simple Proof Page for collecting short recommendations, choosing what becomes public, and sharing one clean link",
+];
+
 export default function Home() {
+  const [isCredibleStoryOpen, setIsCredibleStoryOpen] = useState(false);
+
   return (
     <main className="min-h-screen overflow-hidden">
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-7 sm:px-8 lg:px-10">
@@ -100,16 +137,28 @@ export default function Home() {
           </div>
           <div className="grid gap-4">
             {liveApps.map((app) => (
-              <a
+              <article
                 key={app.title}
-                href={app.href}
                 className="block rounded-[1.75rem] border border-white/[0.08] bg-slate-950/65 p-6 shadow-[0_22px_70px_rgba(0,0,0,0.22)] hover:border-cyan-200/30 sm:p-8"
               >
                 <span className="text-sm font-bold text-cyan-200/85">{app.label}</span>
                 <h3 className="mt-5 text-3xl font-semibold tracking-tight text-white">{app.title}</h3>
                 <p className="mt-4 text-base leading-7 text-slate-300">{app.description}</p>
-                <p className="mt-7 text-sm font-semibold text-cyan-100/90">Open app</p>
-              </a>
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <a className="text-sm font-semibold text-cyan-100/90 hover:text-white" href={app.href}>
+                    Open app
+                  </a>
+                  {app.title === "Credible" ? (
+                    <button
+                      className="w-fit text-sm font-semibold text-slate-400 hover:text-cyan-100"
+                      type="button"
+                      onClick={() => setIsCredibleStoryOpen(true)}
+                    >
+                      How Credible started
+                    </button>
+                  ) : null}
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -200,6 +249,40 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {isCredibleStoryOpen ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 px-4 py-6 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="credible-story-title"
+          onClick={() => setIsCredibleStoryOpen(false)}
+        >
+          <div
+            className="max-h-[86vh] w-full max-w-2xl overflow-y-auto rounded-[1.75rem] border border-white/[0.08] bg-[#070b16] p-6 shadow-[0_30px_120px_rgba(0,0,0,0.5)] sm:p-8"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-5">
+              <h2 id="credible-story-title" className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                {credibleStory[0]}
+              </h2>
+              <button
+                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.035] text-lg leading-none text-slate-300 hover:border-white/20 hover:text-white"
+                type="button"
+                aria-label="Close"
+                onClick={() => setIsCredibleStoryOpen(false)}
+              >
+                &times;
+              </button>
+            </div>
+            <div className="mt-8 space-y-5 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+              {credibleStory.slice(1).map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : null}
     </main>
   );
 }
