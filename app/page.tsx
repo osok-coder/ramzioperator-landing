@@ -139,11 +139,11 @@ export default function Home() {
             {liveApps.map((app) => (
               <article
                 key={app.title}
-                className="block rounded-[1.75rem] border border-white/[0.08] bg-slate-950/65 p-6 shadow-[0_22px_70px_rgba(0,0,0,0.22)] hover:border-cyan-200/30 sm:p-8"
+                className="rounded-[1.75rem] border border-white/[0.09] bg-slate-950/75 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.26)] hover:border-cyan-200/30 sm:p-8"
               >
                 <span className="text-sm font-bold text-cyan-200/85">{app.label}</span>
-                <h3 className="mt-5 text-3xl font-semibold tracking-tight text-white">{app.title}</h3>
-                <p className="mt-4 text-base leading-7 text-slate-300">{app.description}</p>
+                <h3 className="mt-5 text-2xl font-semibold tracking-tight text-white sm:text-3xl">{app.title}</h3>
+                <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">{app.description}</p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
                   <a className="text-sm font-semibold text-cyan-100/90 hover:text-white" href={app.href}>
                     Open app
@@ -231,19 +231,19 @@ export default function Home() {
       </section>
 
       <section id="follow" className="mx-auto w-full max-w-6xl px-6 pb-24 sm:px-8 sm:pb-28 lg:px-10">
-        <div className="rounded-[2rem] border border-white/[0.08] bg-slate-950/65 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.24)] sm:p-8">
+        <div className="rounded-[2rem] border border-white/[0.08] bg-slate-950/75 p-6 shadow-[0_28px_90px_rgba(0,0,0,0.28)] sm:p-8">
           <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">Follow</h2>
           <p className="mt-5 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg sm:leading-8">
             Follow the process as I build, launch, test, improve, and kill small app ideas.
           </p>
-          <div className="mt-9 grid gap-3 sm:grid-cols-3">
-            <a className="rounded-2xl border border-white/[0.07] bg-white/[0.035] p-4 font-semibold text-slate-200 hover:border-cyan-200/30 sm:p-5" href="https://x.com/RamziOperator">
+          <div className="mt-9 grid gap-4 sm:grid-cols-3">
+            <a className="rounded-2xl border border-white/[0.07] bg-white/[0.04] p-4 font-semibold text-slate-200 hover:border-cyan-200/30 sm:p-5" href="https://x.com/RamziOperator">
               X: @RamziOperator
             </a>
-            <a className="rounded-2xl border border-white/[0.07] bg-white/[0.035] p-4 font-semibold text-slate-200 hover:border-cyan-200/30 sm:p-5" href="https://www.linkedin.com/in/ramzinasser/">
+            <a className="rounded-2xl border border-white/[0.07] bg-white/[0.04] p-4 font-semibold text-slate-200 hover:border-cyan-200/30 sm:p-5" href="https://www.linkedin.com/in/ramzinasser/">
               LinkedIn: Ramzi Nasser
             </a>
-            <span className="rounded-2xl border border-white/[0.06] bg-white/[0.025] p-4 font-semibold text-slate-500 sm:p-5">
+            <span className="rounded-2xl border border-white/[0.06] bg-white/[0.03] p-4 font-semibold text-slate-500 sm:p-5">
               Contact link coming soon
             </span>
           </div>
