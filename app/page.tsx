@@ -78,20 +78,20 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="top" className="mx-auto grid w-full max-w-6xl gap-14 px-6 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-20 lg:grid-cols-[1.12fr_0.88fr] lg:items-center lg:gap-16 lg:px-10 lg:pb-24 lg:pt-28">
+      <section id="top" className="mx-auto grid w-full max-w-6xl gap-14 px-6 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-20 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-16 lg:px-10 lg:pb-24 lg:pt-28">
         <div>
           <p className="mb-7 max-w-xl border-l border-cyan-200/40 pl-4 text-sm font-semibold leading-6 tracking-[0.12em] text-cyan-100/80 uppercase sm:tracking-[0.18em]">
             A pharmacist building in public
           </p>
-          <h1 className="max-w-3xl text-6xl font-semibold leading-[0.92] tracking-tight text-white sm:text-7xl lg:text-8xl">
+          <h1 className="max-w-4xl text-6xl font-semibold leading-[0.9] tracking-tight text-white sm:text-7xl lg:text-9xl">
             Ramzi Operator
           </h1>
-          <p className="mt-8 max-w-2xl text-2xl font-semibold leading-tight text-cyan-100/95 sm:text-3xl">
-            Building small apps that help reduce dependence on physical work.
+          <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight text-cyan-100/95 sm:text-3xl">
+            Building small useful apps in public to create online leverage and reduce dependence on physical work.
           </p>
           <div className="mt-8 max-w-2xl space-y-5 text-lg leading-8 text-slate-300 sm:text-xl sm:leading-9">
             <p>I&apos;m a pharmacist building useful web and iPhone apps in public.</p>
-            <p>The goal is online leverage: tools people can use, income that can travel, and less dependence on always being physically present.</p>
+            <p>The goal is simple: ship tools people can use, learn from replies, and build income that does not always need me in the room.</p>
           </div>
           <div className="mt-11 flex flex-col gap-3 sm:flex-row">
             <a
@@ -109,10 +109,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative rounded-[2rem] border border-white/[0.09] bg-slate-950/70 p-4 shadow-[0_34px_110px_rgba(0,0,0,0.34)] ring-1 ring-cyan-200/[0.04] sm:p-5">
+        <div className="relative rounded-[2rem] border border-white/[0.09] bg-slate-950/75 p-4 shadow-[0_34px_110px_rgba(0,0,0,0.34)] ring-1 ring-cyan-200/[0.04] sm:p-5">
           <div className="mb-4 flex items-center justify-between border-b border-white/[0.06] pb-4">
             <p className="text-xs font-bold tracking-[0.2em] text-cyan-100/75 uppercase">Operator loop</p>
-            <p className="text-xs font-semibold text-slate-500">Ship / measure / decide</p>
+            <p className="text-xs font-semibold text-slate-500">Build proof, then decide</p>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {factorySteps.map((step, index) => (
@@ -127,13 +127,18 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="mt-4 rounded-2xl border border-cyan-100/10 bg-cyan-100/[0.035] p-4">
+            <p className="text-sm font-semibold leading-6 text-cyan-100/85">
+              One loop: ship a small tool, capture proof, learn from replies, then improve or kill it
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-16 sm:px-8 sm:pb-20 lg:px-10">
         <div className="grid gap-px overflow-hidden rounded-[1.5rem] border border-white/[0.07] bg-white/[0.07] shadow-[0_22px_80px_rgba(0,0,0,0.2)] sm:grid-cols-2 lg:grid-cols-4">
           {statusFacts.map((fact) => (
-            <div key={fact} className="bg-slate-950/80 px-5 py-4">
+            <div key={fact} className="bg-slate-950/85 px-5 py-4">
               <p className="text-sm font-semibold leading-6 text-slate-200">{fact}</p>
             </div>
           ))}
@@ -146,14 +151,14 @@ export default function Home() {
             <p className="mb-4 text-sm font-bold tracking-[0.16em] text-cyan-100/70 uppercase">Real shipped proof</p>
             <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">Live apps</h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg sm:leading-8">
-              These are small apps already online. The point is to put useful tools in front of people, learn from real use, and keep building where there is signal.
+              These are small apps already online, built to test real problems in public. Each one is a useful surface, a proof asset, and a way to learn from replies.
             </p>
           </div>
           <div className="mt-12 grid gap-5 lg:grid-cols-2">
             {liveApps.map((app) => (
               <article
                 key={app.title}
-                className="flex min-h-full flex-col rounded-[1.75rem] border border-white/[0.09] bg-slate-950/80 p-5 shadow-[0_26px_90px_rgba(0,0,0,0.3)] hover:border-cyan-200/30 sm:p-6"
+                className="flex min-h-full flex-col rounded-[1.75rem] border border-white/[0.09] bg-slate-950/85 p-5 shadow-[0_26px_90px_rgba(0,0,0,0.3)] hover:border-cyan-200/30 sm:p-6"
               >
                 <div className="rounded-[1.25rem] border border-white/[0.07] bg-[#050815] p-3">
                   {app.title === "Credible" ? (
@@ -226,7 +231,12 @@ export default function Home() {
                   )}
                 </div>
                 <div className="flex flex-1 flex-col pt-6">
-                  <span className="text-sm font-bold text-cyan-200/85">{app.label}</span>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="text-sm font-bold text-cyan-200/85">{app.label}</span>
+                    <span className="rounded-full border border-white/[0.07] px-3 py-1 text-xs font-semibold text-slate-500">
+                      Live online
+                    </span>
+                  </div>
                   <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl">{app.title}</h3>
                   <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">{app.description}</p>
                   <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
