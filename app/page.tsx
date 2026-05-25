@@ -78,16 +78,20 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="top" className="mx-auto grid w-full max-w-6xl gap-14 px-6 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-20 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-16 lg:px-10 lg:pb-24 lg:pt-28">
-        <div>
+      <section id="top" className="relative mx-auto grid w-full max-w-6xl gap-14 px-6 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-20 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-16 lg:px-10 lg:pb-24 lg:pt-28">
+        <p aria-hidden="true" className="pointer-events-none absolute -left-2 top-8 hidden text-[9rem] font-semibold leading-none tracking-tight text-white/[0.025] lg:block">
+          small apps
+        </p>
+        <div className="relative">
           <p className="mb-7 max-w-xl border-l border-cyan-200/40 pl-4 text-sm font-semibold leading-6 tracking-[0.12em] text-cyan-100/80 uppercase sm:tracking-[0.18em]">
             A pharmacist building in public
           </p>
           <h1 className="max-w-4xl text-6xl font-semibold leading-[0.9] tracking-tight text-white sm:text-7xl lg:text-9xl">
             Ramzi Operator
           </h1>
-          <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight text-cyan-100/95 sm:text-3xl">
-            Building small useful apps in public to create online leverage and reduce dependence on physical work.
+          <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight text-slate-300 sm:text-3xl">
+            Building small useful apps in public to create{" "}
+            <span className="text-cyan-100">online leverage</span> and reduce dependence on physical work.
           </p>
           <div className="mt-8 max-w-2xl space-y-5 text-lg leading-8 text-slate-300 sm:text-xl sm:leading-9">
             <p>I&apos;m a pharmacist building useful web and iPhone apps in public.</p>
@@ -114,16 +118,16 @@ export default function Home() {
             <p className="text-xs font-bold tracking-[0.2em] text-cyan-100/75 uppercase">Operator loop</p>
             <p className="text-xs font-semibold text-slate-500">Build proof, then decide</p>
           </div>
-          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          <div className="grid gap-2">
             {factorySteps.map((step, index) => (
               <div
                 key={step}
-                className="min-h-28 rounded-2xl border border-white/[0.065] bg-white/[0.04] p-4 sm:p-5"
+                className="grid grid-cols-[3.25rem_1fr] items-center rounded-2xl border border-white/[0.065] bg-white/[0.04] p-3 sm:p-4"
               >
-                <p className="text-xs font-bold tracking-[0.18em] text-cyan-200/75 uppercase">
+                <p className="font-mono text-sm font-semibold text-cyan-200/70">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <p className="mt-6 text-lg font-semibold text-white">{step}</p>
+                <p className="text-base font-semibold text-white">{step}</p>
               </div>
             ))}
           </div>
@@ -169,6 +173,9 @@ export default function Home() {
                         </p>
                         <p className="text-xs font-semibold text-slate-500">Shareable link</p>
                       </div>
+                      <div className="mt-4 rounded-full border border-white/[0.06] bg-slate-950/55 px-3 py-2 text-xs font-semibold text-slate-500">
+                        credible.ramzioperator.com
+                      </div>
                       <div className="mt-5 flex items-start justify-between gap-4">
                         <div>
                           <p className="text-lg font-semibold text-white">Ramzi Nasser</p>
@@ -205,6 +212,9 @@ export default function Home() {
                           Sample audit result
                         </p>
                         <p className="text-xs font-semibold text-slate-500">Workflow view</p>
+                      </div>
+                      <div className="mt-4 rounded-full border border-white/[0.06] bg-slate-950/55 px-3 py-2 text-xs font-semibold text-slate-500">
+                        workflow.ramzioperator.com
                       </div>
                       <div className="mt-5 grid gap-3 sm:grid-cols-[0.72fr_1fr]">
                         <div className="rounded-xl border border-white/[0.06] bg-slate-950/65 p-3">
